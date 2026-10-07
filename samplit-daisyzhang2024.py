@@ -1,4 +1,4 @@
-# Accept a single filename as a command line argument
+# Accept a single filename as a command line argument (version A)
 import sys
 
 if len(sys.argv) != 2: # Check if the correct number of arguments is provided
@@ -25,6 +25,6 @@ try:
                 print(line.strip()) # Print sampled lines to standard output
 
 except FileNotFoundError:
-    print(f"Error: The file '{filename}' was not found.")
+    print(f"Error! Careful, The file '{filename}' was not found.")
     sys.exit(1)
 
