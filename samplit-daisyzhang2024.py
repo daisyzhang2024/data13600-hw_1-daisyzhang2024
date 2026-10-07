@@ -1,7 +1,7 @@
 # Accept a single filename as a command line argument
 import sys
 
-if len(sys.argv) != 2:
+if len(sys.argv) != 2: # Check if the correct number of arguments is provided
     print("Usage: python script.py <filename>")
     sys.exit(1)
 
