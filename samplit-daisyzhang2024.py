@@ -1,8 +1,8 @@
-# Accept a single filename as a command line argument
+# Accept a single filename as a command line argument (version B)
 import sys
 
 if len(sys.argv) != 2:
-    print("Usage: python script.py <filename>")
+    print("Usage: python3 script.py <filename>")
     sys.exit(1)
 
 filename = sys.argv[1]
@@ -21,7 +21,7 @@ import random
 try:
     with open(filename, 'r') as file:
         for line in file: # Preserve original line order
-            if random.random() < 0.05:
+            if random.random() < 0.01:  # 1% probability
                 print(line.strip()) # Print sampled lines to standard output
 
 except FileNotFoundError:
