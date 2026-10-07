@@ -7,7 +7,7 @@ if len(sys.argv) != 2: # Check if the correct number of arguments is provided
 
 filename = sys.argv[1]
 
-# Read the file line by line
+# Read file line by line
 try:
     with open(filename, 'r') as file:
         for line in file:
@@ -20,9 +20,9 @@ except FileNotFoundError:
 import random
 try:
     with open(filename, 'r') as file:
-        for line in file: # Preserve the original line order
+        for line in file: # Preserve original line order
             if random.random() < 0.01:
-                print(line.strip()) # Print the sampled lines to standard output
+                print(line.strip()) # Print sampled lines to standard output
 
 except FileNotFoundError:
     print(f"Error: The file '{filename}' was not found.")
