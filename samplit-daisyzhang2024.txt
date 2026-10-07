@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Accept a single filename as a command line argument (version A)
 import sys
 
 if len(sys.argv) != 2: # Check if the correct number of arguments is provided
     print("Usage: python script.py <filename>")
+=======
+# Accept a single filename as a command line argument (version B)
+import sys
+
+if len(sys.argv) != 2:
+    print("Usage: python3 script.py <filename>")
+>>>>>>> hw_1b
     sys.exit(1)
 
 filename = sys.argv[1]
@@ -21,7 +29,11 @@ import random
 try:
     with open(filename, 'r') as file:
         for line in file: # Preserve original line order
+<<<<<<< HEAD
+            if random.random() < 0.01:
+=======
             if random.random() < 0.01:  # 1% probability
+>>>>>>> hw_1b
                 print(line.strip()) # Print sampled lines to standard output
 
 except FileNotFoundError:
