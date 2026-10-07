@@ -21,7 +21,7 @@ import random
 try:
     with open(filename, 'r') as file:
         for line in file: # Preserve original line order
-            if random.random() < 0.02:
+            if random.random() < 0.01:
                 print(line.strip()) # Print sampled lines to standard output
 
 except FileNotFoundError:
